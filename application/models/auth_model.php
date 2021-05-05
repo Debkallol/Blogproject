@@ -6,6 +6,8 @@ class auth_model extends CI_Model
  {
      parent:: __construct();
  }
+ 
+
 }
 
 ?>

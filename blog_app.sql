@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 04, 2021 at 10:49 AM
+-- Generation Time: May 05, 2021 at 07:17 PM
 -- Server version: 10.4.18-MariaDB
 -- PHP Version: 8.0.3
 
@@ -41,7 +41,8 @@ INSERT INTO `content_table` (`content_id`, `title`, `content`) VALUES
 (2, 'My first blog here', 'I am writing'),
 (3, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Morbi blandit cursus risus at ultrices mi tempus imperdiet.', 'tortor at auctor urna nunc id. Mattis vulputate enim nulla aliquet porttitor lacus luctus accumsan. Enim blandit volutpat maecenas volutpat blandit aliquam. Molestie nunc non blandit massa enim nec dui nunc mattis. Dolor sed viverra ipsum nunc. Nulla posuere sollicitudin aliquam ultrices sagittis orci. Id diam maecenas ultricies mi eget mauris pharetra et ultrices. Curabitur gravida arcu ac tortor dignissim convallis aenean. Sit amet consectetur adipiscing elit pellentesque habitant. Curabitur gravida arcu ac tortor dignissim. Dignissim suspendisse in est ante in nibh mauris cursus. Augue interdum velit euismod in pellentesque massa placerat duis ultricies.'),
 (4, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Morbi blandit cursus risus at ultrices mi tempus imperdiet.', 'tortor at auctor urna nunc id. Mattis vulputate enim nulla aliquet porttitor lacus luctus accumsan. Enim blandit volutpat maecenas volutpat blandit aliquam. Molestie nunc non blandit massa enim nec dui nunc mattis. Dolor sed viverra ipsum nunc. Nulla posuere sollicitudin aliquam ultrices sagittis orci. Id diam maecenas ultricies mi eget mauris pharetra et ultrices. Curabitur gravida arcu ac tortor dignissim convallis aenean. Sit amet consectetur adipiscing elit pellentesque habitant. Curabitur gravida arcu ac tortor dignissim. Dignissim suspendisse in est ante in nibh mauris cursus. Augue interdum velit euismod in pellentesque massa placerat duis ultricies.'),
-(5, 'My first blog here', 'tortor at auctor urna nunc id. Mattis vulputate enim nulla aliquet porttitor lacus luctus accumsan. Enim blandit volutpat maecenas volutpat blandit aliquam. Molestie nunc non blandit massa enim nec dui nunc mattis. Dolor sed viverra ipsum nunc. Nulla posuere sollicitudin aliquam ultrices sagittis orci. Id diam maecenas ultricies mi eget mauris pharetra et ultrices. Curabitur gravida arcu ac tortor dignissim convallis aenean. Sit amet consectetur adipiscing elit pellentesque habitant. Curabitur gravida arcu ac tortor dignissim. Dignissim suspendisse in est ante in nibh mauris cursus. Augue interdum velit euismod in pellentesque massa placerat duis ultricies.');
+(5, 'My first blog here', 'tortor at auctor urna nunc id. Mattis vulputate enim nulla aliquet porttitor lacus luctus accumsan. Enim blandit volutpat maecenas volutpat blandit aliquam. Molestie nunc non blandit massa enim nec dui nunc mattis. Dolor sed viverra ipsum nunc. Nulla posuere sollicitudin aliquam ultrices sagittis orci. Id diam maecenas ultricies mi eget mauris pharetra et ultrices. Curabitur gravida arcu ac tortor dignissim convallis aenean. Sit amet consectetur adipiscing elit pellentesque habitant. Curabitur gravida arcu ac tortor dignissim. Dignissim suspendisse in est ante in nibh mauris cursus. Augue interdum velit euismod in pellentesque massa placerat duis ultricies.'),
+(6, 'My 2nd blog here', 'tortor at auctor urna nunc id. Mattis vulputate enim nulla aliquet porttitor lacus luctus accumsan. Enim blandit volutpat maecenas volutpat blandit aliquam. Molestie nunc non blandit massa enim nec dui nunc mattis. Dolor sed viverra ipsum nunc. Nulla posuere sollicitudin aliquam ultrices sagittis orci. Id diam maecenas ultricies mi eget mauris pharetra et ultrices. Curabitur gravida arcu ac tortor dignissim convallis aenean. Sit amet consectetur adipiscing elit pellentesque habitant. Curabitur gravida arcu ac tortor dignissim. Dignissim suspendisse in est ante in nibh mauris cursus. Augue interdum velit euismod in pellentesque massa placerat duis ultricies.');
 
 -- --------------------------------------------------------
 
@@ -69,7 +70,9 @@ INSERT INTO `users` (`user_id`, `username`, `email`, `password`, `gender`, `crea
 (3, 'Dip', 'Deb@gmail.com', 'c2d838580b3d58800f15ac54f32c668d', 'Male', '2021-05-04', '01774859298'),
 (4, 'Sam', 'sam@official.com', '9fcff34e962d2366511e5514ef5494c0', 'Male', '2021-05-04', '01674859280'),
 (5, 'samara', 'samara@gmail.com', '6a9e901c268e0b307fc87e23180dbfce', 'Female', '2021-05-04', '01774859281'),
-(6, 'Limi', 'limi@mail.com', '6ffea8c6b6ff89f87a78d54da0587149', 'Female', '2021-05-04', '01774859281');
+(6, 'Limi', 'limi@mail.com', '6ffea8c6b6ff89f87a78d54da0587149', 'Female', '2021-05-04', '01774859281'),
+(7, 'kallol', 'kamanashishdeb17@gmail.com', '3e9c9b2591135a7326dda2b4e7b63e7d', 'Male', '2021-05-04', '01674859280'),
+(8, 'Ani', 'ani@gmail.com', 'a6c45362cf65dee14014c5396509ba22', 'Male', '2021-05-05', '01774859280');
 
 --
 -- Indexes for dumped tables
@@ -95,13 +98,13 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `content_table`
 --
 ALTER TABLE `content_table`
-  MODIFY `content_id` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `content_id` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `user_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `user_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

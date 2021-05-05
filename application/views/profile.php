@@ -27,38 +27,7 @@
 
   </head>
   <body>
-        <!-- Navigation-->
-      <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
-            <div class="container">
-                <a class="navbar-brand" href="index.html">Clean Blog</a>
-                <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                    Menu
-                    <i class="fas fa-bars"></i>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarResponsive">
-                    <ul class="navbar-nav ml-auto">
-                        <li class="nav-item"><a class="nav-link" href="<?php echo base_url(); ?>index.php/">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="<?php echo base_url(); ?>index.php/auth/logout">Log out</a></li>
-                        <li class="nav-item"><a class="nav-link" href="contact.html">Sample Post</a></li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-
-        <!-- Page Header-->
-        <header class="masthead" style="background-image: url('assets/img/home-bg.jpg')">
-            <div class="overlay"></div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-8 col-md-10 mx-auto">
-                        <div class="site-heading">
-                            <h1>Clean Blog</h1>
-                            <span class="subheading">Start Your Blog Now</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </header>
+      
     
     <div class="col-lg-4 col-lg-offset-2" >
     <h1>Profile page</h1>
@@ -85,6 +54,7 @@
 
         <div class="text-center">
             <button class="btn btn-primary" name="blog">Add blog</button>
+            <button class="btn btn-primary" name="blog"><a href="<?php echo base_url(); ?>index.php/auth/logout">Log out</a></button>
         </div>
     </form>
         
@@ -92,43 +62,7 @@
     </form>
     </div>
 
-     <!-- Footer-->
-     <footer>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-8 col-md-10 mx-auto">
-                        <ul class="list-inline text-center">
-                            <li class="list-inline-item">
-                                <a href="#!">
-                                    <span class="fa-stack fa-lg">
-                                        <i class="fas fa-circle fa-stack-2x"></i>
-                                        <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
-                                    </span>
-                                </a>
-                            </li>
-                            <li class="list-inline-item">
-                                <a href="#!">
-                                    <span class="fa-stack fa-lg">
-                                        <i class="fas fa-circle fa-stack-2x"></i>
-                                        <i class="fab fa-facebook-f fa-stack-1x fa-inverse"></i>
-                                    </span>
-                                </a>
-                            </li>
-                            <li class="list-inline-item">
-                                <a href="#!">
-                                    <span class="fa-stack fa-lg">
-                                        <i class="fas fa-circle fa-stack-2x"></i>
-                                        <i class="fab fa-github fa-stack-1x fa-inverse"></i>
-                                    </span>
-                                </a>
-                            </li>
-                        </ul>
-                        <p class="copyright text-muted">Copyright &copy; Your Website 2021</p>
-                    </div>
-                </div>
-            </div>
-        </footer>
-
+    
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->

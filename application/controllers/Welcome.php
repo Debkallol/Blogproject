@@ -20,10 +20,13 @@ class Welcome extends CI_Controller {
 	 */
 	public function index()
 	{
+		$this->load->view('header');
 
 		$this->load->model('main_model');
 		$data["fetch"] = $this->main_model->fetch_data();
 
 		$this->load->view('welcome_message', $data);
+
+		$this->load->view('footer');
 	}
 }

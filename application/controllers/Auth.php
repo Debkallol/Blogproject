@@ -7,8 +7,8 @@ class Auth extends CI_Controller
     public function logout(){
         unset($_SESSION);
         redirect("auth/login", "refresh");
-
     }
+
 
     public function login(){
        // echo 'login page';
@@ -16,33 +16,18 @@ class Auth extends CI_Controller
        $this->form_validation->set_rules('password', 'Password', 'required|min_length[5]');
         if($this->form_validation->run()== true){
             //check user in database
-            $username=$_POST['username'];
-            $password=md5($_POST['password']);
-
-            $this->db->select('*');
-            $this->db->from('users');
-            $this->db->where(array('username'=>$username, 'password'=>$password));
-            $query = $this->db->get();
-
-            $user = $query->row();
-
-            if($user->email){
-            $this->session->set_flashdata("success", "you are logged in");
-
-            $_SESSION['user_logged'] = TRUE;
-            $_SESSION['username'] = $user->username;
-
-            return redirect("user/profile", "refresh");
-
-            } else {
-            $this->session->set_flashdata("error", "no such account exicts in database");
-            redirect("auth/login","refresh");
-            }
+            //load model
+            $this->load->model('main_model');
+            $this->main_model->check_login();
+          
+           
+        
         }
-
+        $this->load->view('header');
         $this->load->view('login');
-
+        $this->load->view('footer');
     }
+
 
     public function register(){
 
@@ -55,27 +40,18 @@ class Auth extends CI_Controller
             //if form validation is true
             if($this->form_validation->run() == TRUE) {
                 echo 'form validated';
-
-                $data = array(
-                    'username'=>$_POST['username'],
-                    'email'=>$_POST['email'],
-                    'password'=>md5($_POST['password']),
-                    'gender'=>$_POST['gender'],
-                    'created_date'=>date('Y-m-d'),
-                    'phone'=>$_POST['phone']
-                );
-                $this->db->insert('users',$data);
-
-                $this->session->set_flashdata("success1","Your account has been registered. You can login now");
-                return redirect("auth/register", "refresh");
+                //load model
+                $this->load->model('main_model');
+                $this->main_model->insert_data();
             }
-
-
         }
-
         //load view
+        $this->load->view('header');
         $this->load->view('register');
+        $this->load->view('footer');
     }
+
+    
 
     
 }

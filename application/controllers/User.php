@@ -15,8 +15,10 @@ class User extends CI_Controller
     
     
     public function Profile()
-    {
+    {   
+        $this->load->view('header');
         $this->load->view('profile');
+        $this->load->view('footer');
     }
 
     public function blog(){
@@ -29,22 +31,18 @@ class User extends CI_Controller
             if($this->form_validation->run() == TRUE) {
                 echo 'blog added';
 
-                $blogdata = array(
-                    'title'=>$_POST['title'],
-                    'content'=>$_POST['content']
-                    
-                );
-                $this->db->insert('content_table',$blogdata);
+                $this->load->model('main_model');
+                $this->main_model->insert_blog_data();
 
-                $this->session->set_flashdata("success","Your blog posted now");
-                return redirect("", "refresh");
             }
 
 
         }
 
         //load view
+        $this->load->view('header');
         $this->load->view('welcome_message');
+        $this->load->view('footer');
     }
 }
 
